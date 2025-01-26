@@ -21,9 +21,13 @@
      - 진행 상황과 결과 출력 현재까지 이동한 다리의 상태, 최종 결과 출력
 
 
-2. 각 클래스 역할을 고려해 패키지 분리. O
+2. 각 클래스 역할을 고려해 패키지 분리하기
 3. 클래스 간의 협력을 대략 그려보기
     - InputView <> BridgeMaker
+    - BridgeMaker <> BridgeGame
+    - BridgeNumberGenerator, BridgeRandomNumberGenerator <> BridgeMaker
+    - BridgeGame <> OutputView
+
 
 ### 추가된 요구 사항
 
