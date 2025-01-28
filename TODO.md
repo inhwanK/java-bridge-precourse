@@ -6,19 +6,19 @@
 ## todo
 
 1. 존재하는 클래스와 각 클래스 역할 정리하기
-   - Application main 메서드 
-   - BridgeGame  (파라미터와 반환 타입 변경 가능) 
-     - 다리 건너기 게임을 관리하는 클래스, 칸 이동, 다시하기 메서드가 존재
-   - BridgeMaker (필드, 메서드 시그니처 변경 불가) 
-     - 다리 생성 역할, 다리 길이 입력받아 생성하는 메서드가 존재
-   - BridgeNumberGenerator (generate() 메서드 활용해서 랜덤 값 추출, 코드 변경 불가) 
-     - 랜덤 값 추출용 인터페이스
-   - BridgeRandomNumberGenerator (generate() 메서드 활용해서 랜덤 값 추출, 코드 변경 불가) 
-     - 랜덤 값 추출용 클래스
-   - InputView (인자와 반환 타입 변경 가능) 
-     - 사용자 입력 받는 역할 다리길이, 이동할 칸, 다시 시작 여부를 받음
-   - OutputView (인자와 반환 타입 변경 가능) 
-     - 진행 상황과 결과 출력 현재까지 이동한 다리의 상태, 최종 결과 출력
+    - Application main 메서드 
+    - BridgeGame  (파라미터와 반환 타입 변경 가능) 
+      - 다리 건너기 게임을 관리하는 클래스, 칸 이동, 다시하기 메서드가 존재
+    - BridgeMaker (필드, 메서드 시그니처 변경 불가) 
+      - 다리 생성 역할, 다리 길이 입력받아 생성하는 메서드가 존재
+    - BridgeNumberGenerator (generate() 메서드 활용해서 랜덤 값 추출, 코드 변경 불가) 
+      - 랜덤 값 추출용 인터페이스
+    - BridgeRandomNumberGenerator (generate() 메서드 활용해서 랜덤 값 추출, 코드 변경 불가) 
+      - 랜덤 값 추출용 클래스
+    - InputView (인자와 반환 타입 변경 가능) 
+      - 사용자 입력 받는 역할 다리길이, 이동할 칸, 다시 시작 여부를 받음
+    - OutputView (인자와 반환 타입 변경 가능) 
+      - 진행 상황과 결과 출력 현재까지 이동한 다리의 상태, 최종 결과 출력
 
 
 2. 각 클래스 역할을 고려해 패키지 분리하기
@@ -28,6 +28,32 @@
     - BridgeNumberGenerator, BridgeRandomNumberGenerator <> BridgeMaker
     - BridgeGame <> OutputView
 
+4. 기능 개발 todo 정리하기
+
+- 게임 시작 [x]
+  - 게임 시작 메시지 출력 [x]
+- 게임 시작 환경 구축 (BridgeGame)
+  - InputView, BridgeMaker, Bridge 초기화 [x]
+  - 다리 길이 입력 준비 (InputView)
+    - 표준 입력 객체 초기화 (BufferedReader) [x] 
+    - 다리 길이 입력 메시지 출력 [x]
+    - 다리 길이 유효성 체크 [x]
+      - Illegal 예외 던지기 [x]
+      - 예외 메시지 출력하기 [x]
+  - 입력받은 다리 길이를 BridgeMaker에게 전달 [x]
+  - BridgeMaker가 생성한 다리를 반환 받아 저장  
+    - Bridge를 적절한 타입으로 설계
+    - 반환된 값을 Bridge로 변환
+    - 저장
+
+
+
+- 이동 칸 선택
+- 이동 결과 출력
+- 다시 시도 여부 입력
+- 최종 결과 출력
+- 성공 여부 출력
+- 시도 횟수 출력
 
 ### 추가된 요구 사항
 

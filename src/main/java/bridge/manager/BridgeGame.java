@@ -1,9 +1,32 @@
 package bridge.manager;
 
+import bridge.BridgeMaker;
+import bridge.BridgeRandomNumberGenerator;
+import bridge.io.InputView;
+
+import java.io.IOException;
+
 /**
  * 다리 건너기 게임을 관리하는 클래스
  */
 public class BridgeGame {
+    private InputView inputView;
+    private BridgeMaker bridgeMaker;
+
+    public BridgeGame() {
+        this.inputView = new InputView();
+        this.bridgeMaker = new BridgeMaker(new BridgeRandomNumberGenerator());
+    }
+
+    // 다리 길이를 입력 받을 준비
+    // 입력된 다리길이를 BridgeMaker에게 전달
+    public void readyForMakeBridge() {
+        // InputView의 입력 기능 호출
+        int bridgeSize = inputView.readBridgeSize();
+        // MakeBridge 호출
+        bridgeMaker.makeBridge(bridgeSize);
+        System.out.println("Bridge created");
+    }
 
     /**
      * 사용자가 칸을 이동할 때 사용하는 메서드
