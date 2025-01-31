@@ -1,40 +1,18 @@
 package bridge.io;
 
-import org.junit.platform.commons.util.StringUtils;
-import org.mockito.internal.util.StringUtil;
-
-import java.io.*;
+import camp.nextstep.edu.missionutils.Console;
 
 /**
  * 사용자로부터 입력을 받는 역할을 한다.
  */
 public class InputView {
-    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    private BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
     /**
      * 다리의 길이를 입력받는다.
      * 다리 길이 입력 시 유효성 체크와 문자열 타입으로 입력된 다리 길이를 int로 반환할 책임을 가진다.
      */
-    public int readBridgeSize() {
-        String bridgeSize = startIO();
-        int size = 0;
-        try {
-            size = parseSize(bridgeSize);
-        } catch (IllegalArgumentException e) {
-            System.out.println("[ERROR] 다리 길이는 3부터 20 사이의 숫자여야 합니다.");
-        }
+    public int readBridgeSize(String bridgeSize) throws IllegalArgumentException {
+        int size = parseSize(bridgeSize);
         return size;
-    }
-
-    private String startIO() {
-        String bridgeSize = "";
-        try {
-            System.out.println("다리 길이를 입력해주세요.");
-            bridgeSize = br.readLine();
-        } catch (IOException ignored) {
-        }
-        return bridgeSize;
     }
 
     private int parseSize(String bridgeSize) {

@@ -34,12 +34,16 @@
   - 게임 시작 메시지 출력 [x]
 - 게임 시작 환경 구축 (BridgeGame)
   - InputView, BridgeMaker, Bridge 초기화 [x]
-  - 다리 길이 입력 준비 (InputView)
+  - 다리 길이 입력 (InputView) 
     - 표준 입력 객체 초기화 (BufferedReader) [x] 
     - 다리 길이 입력 메시지 출력 [x]
     - 다리 길이 유효성 체크 [x]
       - Illegal 예외 던지기 [x]
       - 예외 메시지 출력하기 [x]
+    - BridgeGmae에서 InputView 제거하기 [x]
+      - IOManager 클래스로 의존성 변경 [x]
+      - InputView에서 표준 출력 코드 OutputView로 옮기기
+    - 잘못된 입력이 들어올 경우, 다시 입력 가능하도록 설계하기
   - 입력받은 다리 길이를 BridgeMaker에게 전달 [x]
   - BridgeMaker가 생성한 다리를 반환 받아 저장  
     - Bridge를 적절한 타입으로 설계
