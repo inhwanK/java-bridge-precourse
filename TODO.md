@@ -40,7 +40,7 @@
     - 다리 길이 유효성 체크 [x]
       - Illegal 예외 던지기 [x]
       - 예외 메시지 출력하기 [x]
-    - BridgeGmae에서 InputView 제거하기 [x]
+    - BridgeGame에서 InputView 제거하기 [x]
       - IOManager 클래스로 의존성 변경 [x]
       - InputView에서 표준 출력 코드 OutputView로 옮기기 [x]
     - 잘못된 입력이 들어올 경우, 다시 입력 가능하도록 설계하기 [x]
@@ -49,6 +49,9 @@
     - Bridge를 적절한 타입으로 설계
     - 반환된 값을 Bridge로 변환
     - 저장
+- 다리 이동 요구사항 정리하기
+  - 이동할 칸 선택
+  - 이동 결과 출력
 
 
 - 이동 칸 선택
