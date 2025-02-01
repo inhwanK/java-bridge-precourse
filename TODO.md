@@ -42,14 +42,13 @@
       - 예외 메시지 출력하기 [x]
     - BridgeGmae에서 InputView 제거하기 [x]
       - IOManager 클래스로 의존성 변경 [x]
-      - InputView에서 표준 출력 코드 OutputView로 옮기기
-    - 잘못된 입력이 들어올 경우, 다시 입력 가능하도록 설계하기
+      - InputView에서 표준 출력 코드 OutputView로 옮기기 [x]
+    - 잘못된 입력이 들어올 경우, 다시 입력 가능하도록 설계하기 [x]
   - 입력받은 다리 길이를 BridgeMaker에게 전달 [x]
   - BridgeMaker가 생성한 다리를 반환 받아 저장  
     - Bridge를 적절한 타입으로 설계
     - 반환된 값을 Bridge로 변환
     - 저장
-
 
 
 - 이동 칸 선택

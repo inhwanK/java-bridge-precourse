@@ -22,9 +22,8 @@ public class BridgeGame {
     // 다리 길이를 입력 받을 준비
     // 입력된 다리길이를 BridgeMaker에게 전달
     public void readyForMakeBridge() {
-
         // input 모드
-        int bridgeSize = ioManager.readBridgeSize();
+        int bridgeSize = ioManager.convertBridgeSizeInputMode();
         System.out.println("Bridge size: " + bridgeSize);
         // MakeBridge 호출
         bridgeMaker.makeBridge(bridgeSize);

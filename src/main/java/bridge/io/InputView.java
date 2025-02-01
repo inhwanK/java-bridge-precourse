@@ -10,15 +10,10 @@ public class InputView {
      * 다리의 길이를 입력받는다.
      * 다리 길이 입력 시 유효성 체크와 문자열 타입으로 입력된 다리 길이를 int로 반환할 책임을 가진다.
      */
-    public int readBridgeSize(String bridgeSize) throws IllegalArgumentException {
-        int size = parseSize(bridgeSize);
-        return size;
-    }
-
-    private int parseSize(String bridgeSize) {
-        int size = 0;
+    public int readBridgeSize() throws IllegalArgumentException {
+        int size = -1;
         try {
-            size = Integer.parseInt(bridgeSize);
+            size = Integer.parseInt(Console.readLine());
             validateBridgeSizeRange(size);
         } catch (NumberFormatException nfe) {
             throw new IllegalArgumentException();
