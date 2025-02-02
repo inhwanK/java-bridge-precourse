@@ -28,4 +28,14 @@ public class IOManager {
         }
         return bridgeSize;
     }
+
+    public String readMovingDirection() {
+        String direction = "";
+        try {
+            direction = inputView.readMoving();
+        } catch (IllegalArgumentException e) {
+            outputView.printAnnounceInputErrorForMovingDirection();
+        }
+        return direction;
+    }
 }

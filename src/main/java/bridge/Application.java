@@ -10,7 +10,7 @@ public class Application {
         // TODO: 프로그램 구현
         System.out.println("다리 건너기 게임을 시작합니다.");
         BridgeGame gameManager = new BridgeGame();
-        gameManager.readyBridge();
+        gameManager.setUpBridge();
 
     }
 }

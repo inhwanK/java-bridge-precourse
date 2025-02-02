@@ -12,6 +12,11 @@ public class OutputView {
     public void printAnnounceInputErrorForBridgeSize() {
         System.out.println("[ERROR] 다리 길이는 3부터 20 사이의 숫자여야 합니다.");
     }
+
+    public void printAnnounceInputErrorForMovingDirection() {
+        System.out.println("[ERROR] 이동할 칸은 U이나 D만 가능합니다.");
+    }
+
     /**
      * 현재까지 이동한 다리의 상태를 정해진 형식에 맞춰 출력한다.
      * <p>

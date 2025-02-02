@@ -30,10 +30,26 @@ public class InputView {
     /**
      * 사용자가 이동할 칸을 입력받는다.
      */
-    public String readMoving() {
-        return null;
+    public String readMoving() throws IllegalArgumentException {
+        String direction = "";
+        try {
+            direction = Console.readLine();
+            validateDirectionInput(direction);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException();
+        }
+
+        return direction;
     }
 
+    private void validateDirectionInput(String direction) {
+        if (direction == null || direction.length() != 1) {
+            throw new IllegalArgumentException();
+        }
+        if(!direction.equals("U") && !direction.equals("D")) {
+            throw new IllegalArgumentException();
+        }
+    }
     /**
      * 사용자가 게임을 다시 시도할지 종료할지 여부를 입력받는다.
      */
